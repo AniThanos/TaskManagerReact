@@ -1,0 +1,9 @@
+.header_container{
+    background-color: #3d2f2f;
+    height: 50px;
+    width: 100%;
+}
+.header_label{
+    font-size: 30px;
+    color: #ddc0da;
+}

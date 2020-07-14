@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter as Router,Route} from 'react-router-dom';
+import Login from './containers/login/login';
+import Header from './components/Header/header';
+import {Provider} from 'react-redux';
+import store from './reduxSetup/store';
+import TaskManager from './containers/Task_Manager/taskManager';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Provider store={store}>
+      <Header/>
+      <Router>
+        <Route exact path='/' component={Login}/>
+        <Route exact path='/manager' component={TaskManager}/> 
+      </Router>
+      </Provider>
     </div>
   );
 }

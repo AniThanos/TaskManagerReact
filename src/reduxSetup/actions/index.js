@@ -1,0 +1,7 @@
+export const STORE_TOKEN = "STORE_TOKEN"
+export const STORE_TOKEN_SAGA = "STORE_TOKEN_SAGA"
+export const LOGGED_USER = "LOGGED_USER"
+export const LOGGED_USER_SAGA = "LOGGED_USER_SAGA"   
+export const LOGOUT_SAGA = "LOGOUT_SAGA"
+export const LOGOUT_USER = "LOGOUT_USER"
+
